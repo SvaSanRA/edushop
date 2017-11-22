@@ -1,0 +1,12 @@
+{
+    "name": "svasan/edushop",
+    "require": {
+        "twig/twig": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "Alexander.Svetlov",
+            "email": "svasanra@gmail.com"
+        }
+    ]
+}
