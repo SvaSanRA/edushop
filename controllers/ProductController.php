@@ -11,7 +11,9 @@ class ProductController extends Controller
 {
     public function actionIndex()
     {
-        echo "Catalog";
+        $products = ($this->getRepository())->getAll();
+        $this->useLayout = false;
+        echo $this->render("catalog", ['products' => $products]);
     }
 
     public function actionCard()
