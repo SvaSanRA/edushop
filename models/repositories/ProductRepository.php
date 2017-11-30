@@ -22,5 +22,11 @@ class ProductRepository extends Repository
         $this->entityClass = Product::class;
     }
 
+    public function createNew($name, $description, $price)
+    {
+        return $this->conn->execute("INSERT INTO product(name, description, price) VALUE (?, ?, ?)",
+            [$name, $description, $price]);
+    }
+
 
 }
