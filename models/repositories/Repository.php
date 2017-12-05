@@ -48,20 +48,20 @@ abstract class Repository
 
     public function create(DataEntity $entity)
     {
-            $sql = new QueryHelper();
-            return $this->conn->fetchOne("{$sql->getCreateQuery($this->tableName,$this->entityClass)}");
+           /* $sql = new QueryHelper();
+            return $this->conn->fetchOne("{$sql->getCreateQuery($this->tableName,$this->entityClass)}");*/
     }
 
     public function update(DataEntity $entity,$id)
     {
-        $sql = new QueryHelper();
-        return $this->conn->fetchAll("{$sql->getUpdateQuery($this->tableName, $id,$this->entityClass)}");
+        /*$sql = new QueryHelper();
+        return $this->conn->fetchAll("{$sql->getUpdateQuery($this->tableName, $id,$this->entityClass)}");*/
     }
 
     public function delete(DataEntity $entity)
     {
-        $sql = new QueryHelper();
-        return $this->conn->fetchAll("{$sql->getDeleteQuery($this->tableName,$this->entityClass)}");
+        /*$sql = new QueryHelper();
+        return $this->conn->fetchAll("{$sql->getDeleteQuery($this->tableName,$this->entityClass)}");*/
     }
 
     private static function getDb()

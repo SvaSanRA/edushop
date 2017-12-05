@@ -34,7 +34,8 @@ abstract class Controller
     {
         if ($this->useLayout) {
             return $this->renderTemplate("layouts/{$this->layout}",
-                ['content' => $this->renderTemplate($template, $params)]
+                ['content' => $this->renderTemplate($template, $params),
+                    'header' => $this->renderTemplate("layouts/header", $params)]
             );
         } else {
             return $this->renderTemplate($template, $params);
